@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery - Traversing</title>
+    <!--script src="https://code.jquery.com/jquery-3.6.3.min.js"></script-->
+    <script src="jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        .selected {
+            background: lightcoral;
+            padding: 8px;
+            border: 10px solid rgb(0 0 0 / 50%);
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quaerat.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, voluptatibus ratione? Dicta repellendus enim quis.
+    </p>
+
+    <article>
+        <b>Article</b>
+        <section>
+            <strong>This is section</strong>
+            <p class="child">This is paragraph  inside the section.</p>
+        </section>
+    </article>
+
+    <script>
+        $(function() {
+            // $('p').addClass('selected') 
+            $('p').parent('section').addClass('selected')
+            // $('p').parents().addClass('selected')
+            // $('.child').parentsUntil('article').addClass('selected')
+        })
+    </script>
+</body>
+
+</html>

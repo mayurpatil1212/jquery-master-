@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jquery - Set</title>
+    <!--script src="https://code.jquery.com/jquery-3.6.3.min.js"></script-->
+    <script src="jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <button>Click here</button>
+    <h1>This is heading</h1>
+    <a href="https://google.com">Link</a>
+    
+    <script>
+        // Set methods: .text(), .html(), .attr()
+        
+        $(function(){
+            $('button').on('click', function(){
+                $('a').attr({
+                    'href':'https://abc.com',
+                    'title': 'This is title'
+                })
+
+                $('h1').html('<i>This is another text</i>')
+                // $('h1').text('This is another text')
+            })
+        })
+    </script>
+</body>
+</html>

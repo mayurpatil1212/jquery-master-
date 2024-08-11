@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jquery - Filtering</title>
+    <!--script src="https://code.jquery.com/jquery-3.6.3.min.js"></script-->
+    <script src="jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        .background {
+            background: dodgerblue;
+            color: white;
+            padding: 8px;
+            margin: 8px 0;
+            display: block;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <section>
+            <p>This is first paragraph</p>
+            <section>
+                This is section
+            </section>
+            
+            <p class="middle-element">Middle element </p>
+            <a href="javascript:void(0)">This is link</a>
+            <p>Last paragraph</p>
+        </section>
+    </article>
+    <p>This is fourth paragraph</p>
+    <p>This is last paragraph of the page</p>
+
+    <script>
+        // Syntax: .first(), .last(), .eq(), .filter(), .not()
+
+        $(function(){
+            // $('p').first().addClass('background')
+            // $('p').last().addClass('background')
+            // $('p').eq(3).addClass('background') 
+            // $('p').filter('.middle-element').addClass('background')
+            $('p').not('.middle-element').addClass('background')
+        })
+    </script>
+</body>
+</html>

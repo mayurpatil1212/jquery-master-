@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jquery - Load method</title>
+    <!--script src="https://code.jquery.com/jquery-3.6.3.min.js"></script-->
+    <script src="jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <output></output>
+    <script>
+        $(function() {
+            $('output').load('data.txt', function(responseText, fileStatus, xmlhttpRequest) {
+                if (fileStatus == 'success')
+                    console.log('External content loaded successfully!')
+
+                if (fileStatus == 'error') {
+                    console.log('Error- ' + xmlhttpRequest.status + ' : ' + xmlhttpRequest.fileStatus)
+                }
+            })
+        })
+    </script>
+</body>
+</html>

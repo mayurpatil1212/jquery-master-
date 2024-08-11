@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jquery - Stop</title>
+    <!--script src="https://code.jquery.com/jquery-3.6.3.min.js"></script-->
+    <script src="jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        output {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <button class="slideToggle">Slide Toggle</button>
+    <button class="stop">Slide stop</button>
+    <output>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, non! Fuga harum cupiditate asperiores
+        repellendus itaque eligendi, laborum voluptates fugit laboriosam ducimus reiciendis nisi, ut blanditiis facilis
+        inventore aliquid at.</output>
+    <script>
+        $(function () {
+            $('output').hide()
+            $('.slideToggle').on('click', function() {
+                $('output').slideToggle(3000)
+            })
+
+            $('.stop').on('click', function() {
+                $('output').stop()
+            })
+        })
+    </script>
+</body>
+</html>

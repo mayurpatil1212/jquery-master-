@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery - Descendants</title>
+    <!--script src="https://code.jquery.com/jquery-3.6.3.min.js"></script-->
+    <script src="jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        .selected {
+            background: lightcoral;
+            padding: 8px;
+            border: 10px solid rgb(0 0 0 / 50%);
+        }
+    </style>
+</head>
+<body>
+    <article>
+        Article
+        <section>
+            <p>This Pragraph is child element of section.
+            </p>
+            <p>This is another paragraph 1</p>
+            <section>
+                <p>This is another paragraph 2</p>
+                This is content of section
+            </section>
+        </section>
+    </article>
+    <p>This is paragraph</p>
+    <section>
+        <p>This is paragraph inside the section</p>
+    </section>
+    <script>
+        $(function(){
+            $('section').children('p').addClass('selected')
+            // $('section').find('p').addClass('selected')
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jquery - Remove</title>
+    <!--script src="https://code.jquery.com/jquery-3.6.3.min.js"></script-->
+    <script src="jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        h1 {
+            background: lightblue;
+            padding: 8px;
+            width: 140px;
+            height: 140px;
+        }
+
+        .lightgreen {
+            background: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <button>Remove heading</button>
+    <h1>This is heading</h1>
+    <h1 class="lightgreen">This is heading</h1>
+
+    <script>
+        // Syntax: .remove(), .empty()
+        $(function(){
+            $('button').on('click', function(){
+                // $('h1').remove()
+
+                // Can able to add multiple classes
+                // $('h1').remove('.lightgreen')
+                // $('.lightgreen').remove()
+
+                $('h1').empty()
+            })
+        })
+    </script>
+</body>
+</html>

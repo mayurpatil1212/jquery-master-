@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery - Siblings</title>
+    <!--script src="https://code.jquery.com/jquery-3.6.3.min.js"></script-->
+    <link rel="stylesheet" href="common.css">
+    <script src="jquery-3.6.3.min.js"></script>
+    <style>
+        .background {
+            background: dodgerblue;
+            color: white;
+            padding: 8px;
+            margin: 8px 0;
+            display: block;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <article class="parent">
+        <section>
+            <p class="child-paragraph">This is child paragraph</p>
+            <section>This is section</section>
+            <p class="paragraph">This is paragraph</p>
+            <a href="javascript:void(0)" class="child-anchor">This is child anchor</a>
+            <p>This is last child paragraph</p>
+        </section>
+    </article>
+
+    <p>This is fourth paragraph</p>
+    <p>This is fifth paragraph</p>
+
+    <script>
+        // Syntax: siblings(), next(), nextAll(), .nextUntil(), .prev(), .prevAll(), .prevUntil('section')
+
+        $(function() {
+            // $('.child-paragraph').siblings().addClass('background')
+            // $('.child-paragraph').next().addClass('background')
+            // $('.parent').nextAll().addClass('background')
+            // $('.child-paragraph').nextUntil('a').addClass('background')
+            // $('.child-anchor').prev().addClass('background')
+            // $('.child-anchor').prevAll().addClass('background')
+            $('section p:last-child').prevUntil('section').addClass('background')
+        })
+    </script>
+</body>
+
+</html>

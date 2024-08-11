@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jquery - Classes</title>
+    <!--script src="https://code.jquery.com/jquery-3.6.3.min.js"></script-->
+    <script src="jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        h1 {
+            padding: 8px;
+        }
+        .background {
+            background: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <button id="addBackground">Add background</button>
+    <button id="removeBackground">Remove style</button>
+    <button id="toggleBackground">Toggle style</button>
+
+    <h1>This is heading</h1>
+
+    <script>
+        // Syntax: .addClass(), .removeClass(), .toggleClass()
+        
+        $(function() {
+            $('#addBackground').on('click', function(){
+                $('h1').addClass('background')
+            })
+            $('#removeBackground').on('click', function(){
+                $('h1').removeClass('background')
+            })
+            $('#toggleBackground').on('click', function(){
+                $('h1').toggleClass('background')
+            })
+        })
+    </script>
+</body>
+</html>

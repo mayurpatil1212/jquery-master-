@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jquery - Slide</title>
+    <link rel="stylesheet" href="common.css">
+    <script src="jquery-3.6.3.min.js"></script>
+</head>
+<body>
+    <button class="slideDown">Slide Down</button>
+    <button class="slideUp">Slide up</button>
+    <button class="slideToggle">Slide Toggle</button>
+    <output>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, non! Fuga harum cupiditate asperiores repellendus itaque eligendi.</output>
+<script>
+    $(function () {
+        $('output').hide()
+        $('.slideDown').on('click', function() {
+            $('output').slideDown('slow')
+        })
+        $('.slideUp').on('click', function() {
+            $('output').slideUp('slow')
+        })
+        $('.slideToggle').on('click', function() {
+            $('output').slideToggle('slow')
+        })
+    })
+</script>
+</body>
+</html>

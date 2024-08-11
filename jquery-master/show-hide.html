@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jquery - Show hide</title>
+    <!--script src="https://code.jquery.com/jquery-3.6.3.min.js"></script-->
+    <link rel="stylesheet" href="common.css">
+    <script src="jquery-3.6.3.min.js"></script>
+</head>
+<body>
+    <button class="show">Show</button>
+    <button class="hide">Hide</button>
+    <button class="toggle">Toggle</button>
+    <h1>This is heading</h1>
+
+    <script>
+        $(function () {
+            $('h1').hide()
+
+            $('.show').on('click', function() {
+                $('h1').show(2500)
+            })
+            $('.hide').on('click', function () {
+                $('h1').hide('slow')
+            })
+            $('.toggle').on('click', function () {
+                $('h1').toggle('fast')
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jquery - Fade</title>
+    <link rel="stylesheet" href="common.css">
+    <script src="jquery-3.6.3.min.js"></script>
+</head>
+<body>
+    <button class="fadein">Fade In</button>
+    <button class="fadeout">Fade Out </button>
+    <button class="fadetoggle">Fade Toggle</button>
+    <button class="fadeto">Fade To</button>
+    <output>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, non! Fuga harum cupiditate asperiores
+        repellendus itaque eligendi.
+    </output>
+
+<script>
+    $(function () {
+        $('output').hide()
+        $('.fadein').on('click', function() {
+            $('output').fadeIn(2500)
+        })
+        $('.fadeout').on('click', function () {
+            $('output').fadeOut(2500)
+        })
+        $('.fadetoggle').on('click', function () {
+            $('output').fadeToggle('slow')
+        })
+        $('.fadeto').on('click', function() {
+            $('output').fadeTo('slow', .5)
+        })
+    })
+</script>
+</body>
+</html>
